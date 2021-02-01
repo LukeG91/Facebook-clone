@@ -581,7 +581,7 @@ header {
 }
 
 .newpost input[type="text"] {
-  width: 100%;
+  width: 90%;
   border: none;
   border-radius: 25px;
   font-size: 1.3rem;
@@ -591,6 +591,8 @@ header {
   padding-left: 20px;
   background: var(--fb-bgcolor);
   color: var(--fb-black);
+  position: relative;
+  top: -15px;
 }
 
 .hline {
@@ -1145,6 +1147,21 @@ header {
     left: 20px;
   }
 
+  .newpost input[type="text"] {
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    background: var(--fb-bgcolor);
+    color: var(--fb-black);
+    position: relative;
+    top: -15px;
+  }
+
   /* .create__room button {
     display: none
   } */
@@ -1160,16 +1177,18 @@ header {
   }
 
   .newpost input[type="text"] {
-    width: 100%;
+    width: 70%;
     border: none;
     border-radius: 25px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     margin-left: 10px;
     padding: 10px;
     padding-left: 20px;
     background: var(--fb-bgcolor);
     color: var(--fb-black);
+    position: relative;
+    top: -15px;
   }
 
   .create__room button {
@@ -1182,4 +1201,22 @@ header {
     position: relative;
     left: 10px;
   }
+}
+
+@media only screen and (max-width: 320px){
+  .newpost input[type="text"] {
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    font-size: .7rem;
+    font-weight: 300;
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    background: var(--fb-bgcolor);
+    color: var(--fb-black);
+    position: relative;
+    top: -15px;
+  }
+
 }
