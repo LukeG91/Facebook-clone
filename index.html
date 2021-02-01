@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="css/font5/all.css">
+    <link rel="stylesheet" herf="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet" type='text/css'>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__logo-section">
+            <div class="header__logo-icon">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="header__logo-search">
+                <i class="fas fa-search"></i>
+                <input type="text">
+            </div>
+            <div class="header__mobile-button">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="header__menu-tabs">
+            <div class="header__menu-tab header__menu-tab--active">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="header__menu-tab ">
+                <i class="fas fa-flag">
+                    <div class="header__notification-bubble">
+                        3
+                    </div>
+                </i>
+            </div>
+            <div class="header__menu-tab ">
+                <i class="fas fa-tv">
+                    <div class="header__notification-bubble">
+                        9
+                    </div>
+                </i>
+            </div>
+            <div class="header__menu-tab ">
+                <i class="fas fa-store"></i>
+            </div>
+            <div class="header__menu-tab ">
+                <i class="fas fa-users"></i>
+            </div>
+        </div>
+        <div class="header__account">
+            <div class="header__actions">
+                <img class="header__user-img" src="./img/Wedding.jpeg" alt="pic goes here">
+                <span class="header__user-name">Luke</span>
+                <a href="#" class="header__circle-link">
+                    <i class="header__link-icon fas fa-plus"></i>
+                </a>
+                <a href="#" class="header__circle-link">
+                    <i class="header__link-icon fab fa-facebook-messenger">
+                        <div class="header__notification-bubble-right-2">
+                            5
+                        </div>
+                    </i>
+                </a>
+                <a href="#" class="header__circle-link">
+                    <i class="header__link-icon fas fa-bell">
+                        <div class="header__notification-bubble-right-3">
+                            9
+                        </div>
+                    </i>
+                </a>
+                <a href="#" class="header__circle-link">
+                    <i class="header__link-icon fas fa-sort-down"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="content-area content-area--feed">
+
+        <section class="sidenav">
+            <div class="sidenav__item">
+                <img src="img/Wedding.jpeg" alt="pic goes here" class="sidenav__item-img">
+                <span class="sidenav__item-title">
+                    Luke Glendining
+                </span>
+            </div>
+            <div class="sidenav__item">
+                <div class="sidenav__item-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <span class="sidenav__item-title">
+                    Friends
+                </span>
+            </div>
+            <div class="sidenav__item">
+                <div class="sidenav__item-icon">
+                    <i class="fas fa-flag"></i>
+                </div>
+                <span class="sidenav__item-title">
+                    Pages
+                    <span class="sidenav__item-notification">
+                        <div class="sidenav__item-notification-circle"></div>9+ new
+                    </span>
+                </span>
+            </div>
+            <div class="sidenav__item">
+                <div class="sidenav__item-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <span class="sidenav__item-title">
+                    Groups
+                    <span class="sidenav__item-notification">
+                        <div class="sidenav__item-notification-circle"></div>3+ new
+                    </span>
+                </span>
+            </div>
+
+            <div class="sidenav__item">
+                <div class="sidenav__item-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <span class="sidenav__item-title">
+                    Marketplace
+                </span>
+            </div>
+            <div class="sidenav__item">
+                <div class="sidenav__item-icon sidenav__item-icon--circle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <span class="sidenav__item-title">
+                    See More
+                </span>
+            </div>
+            <div class="sidenav__line"></div>
+            <span class="sidenav__heading-title">
+                Your Shortcuts
+            </span>
+            <div class="sidenav__item">
+                <img src="img/trading.jpg" alt="pic goes here" class="sidenav__item-img">
+                <span class="sidenav__item-title">
+                    Forex Trading
+                </span>
+            </div>
+            </div>
+            <div class="sidenav__item">
+                <img src="img/fishing.jpg" alt="pic goes here" class="sidenav__item-img">
+                <span class="sidenav__item-title">
+                    Big Game Fishing
+                </span>
+            </div>
+            <div class="sidenav__item">
+                <img src="img/web-development.jpg" alt="pic goes here" class="sidenav__item-img">
+                <span class="sidenav__item-title">
+                    SA Web Developers
+                </span>
+            </div>
+            <div class="sidenav__item">
+                <img src="img/Arsenal.jpg" alt="pic goes here" class="sidenav__item-img">
+                <span class="sidenav__item-title">
+                    Arsenal Fan Club
+                </span>
+            </div>
+
+            <div class="sidenav__item">
+                <div class="sidenav__item-icon sidenav__item-icon--circle">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <span class="sidenav__item-title">
+                    See More
+                </span>
+            </div>
+        </section>
+
+        <section class="feed">
+            <div class="stories">
+                <div class="stories__video-container">
+                    <img class="stories__bg" src="img/star-wars2.jpg" alt="pic goes here">
+                    <div class="stories-title">
+                        <div class="stories__new-btn">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        Create a story
+                    </div>
+                </div>
+                <div class="stories__video-container stories__video-container--plain">
+                    <img class="stories__bg" src="https://media.giphy.com/media/e0Qgu8zrZlBZu/giphy.gif" alt="">
+                    <div class="stories__title">
+
+                        <img class="stories__user" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                        <div class="stories__title--name">
+                            Sheldon Sabatta
+                        </div>
+                    </div>
+
+                </div>
+                <div class="stories__video-container stories__video-container--plain">
+                    <img class="stories__bg" src="https://media.giphy.com/media/zcWncFFkohH2MXkZyA/giphy.gif" alt="">
+                    <div class="stories__title">
+
+                        <img class="stories__user" src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+                        <div class="stories__title--name">
+                            <span>Jesse Rinquest</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="stories__video-container stories__video-container--plain">
+                    <img class="stories__bg" src="https://media.giphy.com/media/xUPGcB5L0TIfLrDH8c/giphy.gif" alt="">
+                    <div class="stories__title">
+
+                        <img class="stories__user" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                        <div class="stories__title--name">
+                            Jonathan Botha
+                        </div>
+                    </div>
+
+                </div>
+                <div class="stories__video-container stories__video-container--plain">
+                    <img class="stories__bg" src="https://media.giphy.com/media/ZcV2VOdve1FIDY8V84/giphy.gif" alt="">
+                    <div class="stories__title">
+
+                        <img class="stories__user" src="https://randomuser.me/api/portraits/men/4.jpg" alt="">
+                        <div class="stories__title--name">
+                            Chris <br> Young
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="stories__video-container stories__video-container--plain">
+                    <img class="stories__bg" src="https://media.giphy.com/media/lwJT5siWUsB1yEvX09/giphy.gif" alt="">
+                    <div class="stories__title">
+
+                        <img class="stories__user" src="https://randomuser.me/api/portraits/men/5.jpg" alt="">
+                        <div class="stories__title--name">
+                            Cameron Young
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="feed__box submit-post">
+                <div class="newpost">
+                    <img class="newpost__user-img" src="img/Wedding.jpeg" alt="pic goes here">
+                    <input type="text" placeholder="What's on your mind Luke?">
+                </div>
+                <div class="hline"></div>
+                <div class="post__types">
+                    <div class="post__types-item">
+                        <i class="fas fa-video"></i> <span class="post__types-title"> Live video</span>
+                    </div>
+                    <div class="post__types-item">
+                        <i class="fas fa-photo-video"></i> <span class="post__types-title"> Photo video</span>
+                    </div>
+                    <div class="post__types-item">
+                        <i class="fas fa-laugh-beam"></i> <span class="post__types-title"> Feeling/Activity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create__room">
+                <div class="create__room-button-box">
+                    <button>
+                        <i class="fas fa-video"></i>Create Room
+                    </button>
+                </div>
+                <div class="create__room-images">
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                    <div class="create__room-image">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
+                        <div class="create__room-image-notification-bubble"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed__box photopost">
+                <div class="photopost__info">
+                    <div class="photopost__left">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="">
+                        <div class="photopost__details">
+                            <span class="photopost__name">Luke G</span>
+                            <span class="photopost__date">10th of January at 17:15 <i class="fas fa-user-friends"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="photopost__description">
+                    So pumped for the game tomorrow! Come on Arsenal!
+                </div>
+                <div class="photopost__image">
+                    <img src="img/Arsenal.jpg" alt="">
+                </div>
+                <div class="photopost__stats">
+                    <div class="photopost__stats-emojis">
+                        <div class="emoji-circle emoji-circle-blue">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="emoji-circle emoji-circle-red">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="emoji-circle emoji-circle-yellow">
+                            <i class="fas fa-surprise yellow-emoji"></i>
+                        </div>
+                        3.5k
+
+                    </div>
+                    <div class="photopost__stats-share">
+                        90 Comments 105 Shares
+                    </div>
+                </div>
+                <div class="hline"> </div>
+
+                <div class="photopost__actions">
+                    <a href="#" class="photopost__link">
+                        <i class="fas fa-thumbs-up"></i> <span>Like</span>
+                    </a>
+                    <a href="#" class="photopost__link">
+                        <i class="fas fa-comment"></i> <span>Comment</span>
+                    </a>
+                    <a href="#" class="photopost__link">
+                        <i class="fas fa-share"></i> <span>Share</span>
+                    </a>
+                </div>
+                <div class="hline"></div>
+
+            </div>
+        </section>
+    </section>
+
+    <section class="right__navigation">
+        <div class="right__navigation-sponsored-pages">
+            <h2>Sponsored</h2>
+            <div class="hline"></div>
+
+        </div>
+        <div class="right__navigation-your-pages">
+            <h2>Your Pages</h2>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="">
+            <span class="right__navigation-item-title">Codingphase</span>
+        </div>
+        <div class="right__navigation-item-icons">
+            <div class="right__navigation-item-comments-icon">
+                <a href="#"> <i class="right-top-icon far fa-comments">
+                        <span class="right-top-icon-text-1">17
+                            Messages</span></i></a>
+            </div>
+            <div class="right__navigation-item-bell">
+                <a href=""><i class="right-top-icon far fa-bell">
+                        <span class="right-top-icon-text-2">20+
+                            Notifications</span></i></a>
+            </div>
+
+            <div class="right__navigation-item-horn">
+                <a href=""> <i class="right-top-icon fas fa-bullhorn">
+                        <span class="right-top-icon-text">Create
+                            Promotion</span></i> </a>
+            </div>
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="right__navigation-item">
+            <h3 class="friend__requests-heading">Friend Requests</h3>
+            <a href="">See All</a>
+        </div>
+
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="">
+            <span class="right__navigation-item-title">Chris Young
+                <div class="friends__requests-info">6 mutual friends</div>
+                <div class="confirm__or-cancel">
+                    <button>Confirm</button>
+                    <button>Delete</button>
+                </div>
+            </span>
+
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="birthdays">
+            <h3>Birthdays</h3>
+            <div class="birthdays__person-name">
+                <a href=""> <i class="fas fa-gift"></i>
+                    <strong>Luke Glendining's</strong> birthday is today.
+                </a>
+            </div>
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="contacts">
+            <div class="contacts__heading">
+                Contacts
+                <div class="contacts__icons">
+                    <i class="fas fa-video"></i>
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="">
+            <span class="right__navigation-item-title">Chris Young</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="">
+            <span class="right__navigation-item-title">Cammo Young</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="">
+            <span class="right__navigation-item-title">Nicky G</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="">
+            <span class="right__navigation-item-title">Sheldon Sabatta</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="">
+            <span class="right__navigation-item-title">Jono Botha</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="">
+            <span class="right__navigation-item-title">Jesse Rinquest</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/26.jpg" alt="">
+            <span class="right__navigation-item-title">Kivesh Beeharilal</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/27.jpg" alt="">
+            <span class="right__navigation-item-title">John B</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="">
+            <span class="right__navigation-item-title">Luke A</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="">
+            <span class="right__navigation-item-title">Nick B</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/30.jpg" alt="">
+            <span class="right__navigation-item-title">Paul E</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+        <div class="right__navigation-item">
+            <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="">
+            <span class="right__navigation-item-title">Mike A</span>
+            <div class="right__navigation-item-notification-bubble"></div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="floatingmsg">
+            <div class="floatingmsg__bubble">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="">
+                <div class="floatingmsg__notification">1</div>
+            </div>
+            <div class="floatingmsg__bubble">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
+                <div class="floatingmsg__notification">3</div>
+            </div>
+            <div class="floatingmsg__bubble">
+                <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="">
+                <div class="floatingmsg__notification">5</div>
+            </div>
+            <div class="floatingmsg__bubble">
+                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="">
+                <div class="floatingmsg__notification">4</div>
+            </div>
+            <div class="floatingmsg__bubble">
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="">
+                <div class="floatingmsg__notification">7</div>
+            </div>
+            <div class="floatingmsg__bubble">
+                <i class="fas fa-edit"></i>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

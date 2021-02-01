@@ -1,0 +1,1185 @@
+* {
+  box-sizing: border-box;
+}
+
+/* The code below removes the border that gets displayed automatically by 
+the browser around something that you click on, 
+focus symbolises something that you have clicked on. */
+
+*:focus {
+  outline: none;
+}
+
+/* Declaring variables that can be re-used when styling the project*/
+
+:root {
+  --fb-blue: #0a86f0;
+  --fb-black: #090909;
+  --fb-red: #ee2340;
+  --fb-green: #3db557;
+  --fb-yellow: #f6b023;
+  --fb-bgcolor: #eef0f3;
+  --fb-white: #fff;
+  --fb-whitebg: #fff;
+  --dark-color-text: #090909;
+  --light-color-text: #606770;
+  --button-link: #e0e2e8;
+  --stories-bg: #090909;
+  --icon-circle-bg: linear-gradient(
+    0deg,
+    rgba(65, 67, 69, 1) 0%,
+    rgba(107, 110, 114, 1) 100%
+  );
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fb-blue: #524eee;
+    --fb-black: #ffffff;
+    --fb-red: #ee2340;
+    --fb-green: #6fcf97;
+    --fb-yellow: #f6b024;
+    --fb-bgcolor: #141432;
+    --fb-white: #ffffff;
+    --fb-whitebg: #1d1d42;
+    --dark-color-text: #ffffff;
+    --light-color-text: black;
+    --button-link: #524eee;
+    --stories-bg: #524eee;
+  }
+}
+
+body {
+  background-color: var(--fb-bgcolor);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(-fb-black);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--fb-whitebg);
+  height: 62px;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+}
+
+.header__logo-section {
+  display: flex;
+}
+
+.header__logo-icon .fa-facebook {
+  font-size: 40px;
+  color: var(--fb-blue);
+}
+
+.header__logo-search {
+  position: relative;
+  margin-left: 12px;
+}
+
+.header__mobile-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.header__logo-search .fa-search {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  color: var(--fb-white);
+}
+.header__logo-search input[type="text"] {
+  background: var(--fb-bgcolor);
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  color: var(--fb-white);
+  padding-left: 35px;
+  font-weight: 300;
+  border: none;
+  margin-right: 20px;
+}
+
+.header__menu-tabs {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  /* The below code is for the div to not shrink and to not grow */
+  flex: none;
+}
+
+.header__menu-tabs i {
+  color: var(--fb-black);
+}
+
+.header__menu-tab {
+  display: flex;
+  /* Code below centers the content horizontally */
+  justify-content: center;
+  /* Code below centers the content vertically */
+  align-items: center;
+  width: 600px;
+  height: 62px;
+  border-bottom: 4px solid var(--fb-whitebg);
+  color: var(--light-color-text);
+  cursor: pointer;
+  /* Code below is setting the size of the icons, icons get treated the same as text with sizing */
+  font-size: 1.3rem;
+}
+
+.header__menu-tab--active,
+.header__menu-tab:hover {
+  border-bottom: 4px solid var(--fb-blue);
+}
+
+.header__menu-tab:hover .fas,
+.header__menu-tab:hover .fab {
+  color: var(--fb-blue);
+}
+
+.header__menu-tab--active .fas,
+.header__menu-tab--active .fab {
+  color: var(--fb-blue);
+}
+
+.header__menu-tab .fas,
+.header__menu-tab .fab {
+  position: relative;
+}
+
+.header__notification-bubble {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fb-red);
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* To make a perfect circle give the item the same height and width and change the border radius to 50% */
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  font-weight: 700;
+}
+
+/* making the display flex so that everything can be aligned next to each other.  */
+
+.header__account {
+  display: flex;
+}
+
+.header__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__user-img {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.header__user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 20px;
+  color: var(--fb-black);
+}
+
+.header__circle-link {
+  background: var(--button-link);
+  height: 40px;
+  width: 40px;
+  /* we are using flexbox to make the element center right in the middle */
+  display: flex;
+  border-radius: 50%;
+  color: var(--dark-color-text);
+  /* centering the icon
+  display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* The code below is removing the default underline that the icons have */
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.header__circle-link .fa-sort-down {
+  position: relative;
+  top: -3px;
+  font-size: 1.4rem;
+}
+
+.header__link-icon {
+  font-size: 0.9rem;
+}
+
+.header__notification-bubble-right-3 {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fb-red);
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* To make a perfect circle give the item the same height and width and change the border radius to 50% */
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 65px;
+  font-weight: 700;
+}
+
+.header__notification-bubble-right-2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fb-red);
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* To make a perfect circle give the item the same height and width and change the border radius to 50% */
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 115px;
+  font-weight: 700;
+}
+
+.content-area--feed {
+  display: flex;
+  padding: 90px 15px;
+}
+
+.sidenav {
+  width: 25%;
+}
+
+.sidenav__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.sidenav__item-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  object-position: center;
+}
+
+.sidenav__item-title {
+  font-size: 1rem;
+  font-weight: 500px;
+  color: var(--fb-black);
+}
+
+.sidenav__item-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.sidenav__item-notification {
+  color: var(--dark-color-text);
+  margin-top: 5px;
+  font-size: 0.75rem;
+  font-size: 300;
+  display: block;
+}
+
+.sidenav__item-notification-circle {
+  background: var(--fb-blue);
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.sidenav__item-icon--circle {
+  background: var(--button-link);
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.sidenav__item-icon--circle-white {
+  background: var(--icon-circle-bg);
+  border-radius: 50%;
+  font-size: 1.7rem;
+  width: 35px;
+  height: 35px;
+  margin-right: 19px;
+}
+
+.sidenav__item-icon .fas,
+.sidenav__item-icon .fab {
+  color: var(--fb-blue);
+}
+
+.sidenav__item-icon--circle .fas,
+.sidenav__item-icon--circle .fab {
+  color: var(--fb-black);
+}
+
+.sidenav__item-icon--circle-white .fas,
+.sidenav__item-icon--circle .fab {
+  color: var(--fb-whitebg);
+}
+
+.sidenav__line {
+  height: 2px;
+  background: var(--button-link);
+  margin-bottom: 15px;
+  display: block;
+  width: 320px;
+}
+
+.sidenav__heading-title {
+  color: var(--fb-black);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.feed {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stories {
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.stories__video-container {
+  /* //The code below makes the image inside the div not overlap( not go over its height and width specifications) */
+  overflow: hidden;
+  width: 120px;
+  height: 200px;
+  border-radius: 5%;
+  background: var(--stories-bg);
+  position: relative;
+  box-shadow: 0px 2px 2px 0px var(--fb-blue);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.stories__video-container:nth-last-child(1) {
+  /* //This is targeting the last element in the stories__video-container div and it is taking away the margin */
+  margin-right: 0px;
+}
+
+.stories__bg {
+  object-fit: cover;
+  object-position: center;
+  width: 120px;
+  height: 200px;
+  opacity: 0.3;
+  transition: opacity.3 ease-in-out;
+}
+
+.stories__video-container:hover .stories__bg {
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+}
+
+.stories-title {
+  position: absolute;
+  bottom: 0;
+  background: var(--fb-whitebg);
+  width: 100%;
+  color: var(--fb-black);
+  padding: 20px 20px 10px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.stories__new-btn {
+  background: var(--fb-blue);
+  width: 40px;
+  height: 40px;
+  color: var(--fb-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 4px solid var(--fb-white);
+  position: absolute;
+  top: -20px;
+  left: 40px;
+}
+
+.stories__video-container--plain .stories__title {
+  background: transparent;
+  color: var(--fb-white);
+}
+
+.stories__user {
+  border: 4px solid var(--fb-blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 65px;
+}
+
+.stories__user img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.stories__title--name {
+  position: absolute;
+  top: 150px;
+  color: fff;
+  left: 5px;
+  margin: 5px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.feed__box {
+  padding: 20px;
+  max-width: 700px;
+  width: 100%;
+  background: var(--fb-whitebg);
+  margin-bottom: 20px;
+  flex: none;
+  color: var(--fb-black);
+}
+
+.create__room {
+  background: var(--fb-whitebg);
+  padding: 5px;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
+}
+
+.create__room-button-box{
+  /* border: 2px solid black; */
+  width: 150px;
+  position: absolute;
+  left: 0;
+}
+
+.create__room button {
+  background: var(--fb-whitebg);
+  color: var(--fb-black);
+  height: 35px;
+  width: 150px;
+  border-radius: 20px;
+  border: 0.5px solid var(--fb-blue);
+  margin-right: 100px;
+}
+
+.create__room i {
+  margin-right: 15px;
+  color: var(--fb-blue);
+}
+
+.create__room-image {
+  position: relative;
+}
+
+.create__room-image-notification-bubble{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--fb-green);
+  bottom: 7px;
+  right: 10px;
+}
+
+.create__room-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.create__room-images{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: -140px;
+}
+
+/* .create__room-image-notification-bubble {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #16c79a;
+  color: #fff;
+  width: 30px;
+  height: 13px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* To make a perfect circle give the item the same height and width and change the border radius to 50% */
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  left: 800px;
+  font-weight: 700;
+  border: 3px solid white;
+} */
+
+.newpost {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.newpost__user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.newpost input[type="text"] {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-left: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  background: var(--fb-bgcolor);
+  color: var(--fb-black);
+}
+
+.hline {
+  height: 0.5px;
+  background: var(--button-link);
+  margin-bottom: 10px;
+  margin-top: 15px;
+  display: block;
+}
+
+.post__types {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.post__types-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.post__types-item .fas {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.post__types-item .fa-video {
+  color: var(--fb-red);
+}
+.post__types-item .fa-photo-video {
+  color: var(--fb-green);
+}
+.post__types-item .fa-laugh-beam {
+  color: var(--fb-yellow);
+}
+
+.photopost {
+  padding: 0px 0px 20px;
+  margin-bottom: 20px;
+}
+
+.photopost__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 20px;
+}
+
+.photopost__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px 10px 10px 0px;
+}
+
+.photopost__left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.photopost__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.photopost__name {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.photopost__date {
+  font: 0.7rem;
+  color: var(--fb-black);
+}
+
+.photopost__info .fa-ellipsis-h {
+  color: var(--light-color-text);
+}
+
+.photopost__description {
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+
+.photopost__image img {
+  width: 100%;
+  /* height: 500px; */
+  object-fit: cover;
+}
+
+.photopost__stats {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  color: var(--light-color-text);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.photopost__stats-emojis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fb-black);
+}
+
+.photopost__stats-share {
+  color: var(--fb-black);
+}
+
+.emoji-circle {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  background: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  border: 0.7px solid white;
+  position: relative;
+}
+
+.emoji-circle:nth-child(1) {
+  z-index: 3;
+}
+
+.emoji-circle:nth-child(2) {
+  z-index: 2;
+  left: -5px;
+}
+
+.emoji-circle:nth-child(3) {
+  z-index: 1;
+  left: -10px;
+}
+
+.emoji-circle-blue {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 134, 240, 1) 0%,
+    rgba(8, 117, 210, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.emoji-circle-red {
+  background: linear-gradient(
+    90deg,
+    rgba(238, 35, 64, 1) 0%,
+    rgba(238, 35, 64, 1) 35%,
+    rgba(240, 13, 45, 1) 100%
+  );
+}
+
+.emoji-circle-yellow {
+  background: #000000;
+  overflow: hidden;
+}
+
+.emoji-circle-blue .fa-thumbs-up {
+  position: relative;
+  top: -1px;
+}
+
+.emoji-circle-yellow .fa-surprise {
+  /* color: rgba(246, 176, 36, 1) 0%; */
+  color: linear-gradient(rgba(246, 176, 35, 1) 0%);
+}
+
+.yellow-emoji {
+  color: yellow;
+  font-size: 1.4rem;
+}
+
+.photopost__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  /* border: 2px solid black; */
+  margin-top: 18px;
+}
+
+.photopost__actions a {
+  color: var(--fb-black);
+}
+
+.photopost__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color-text);
+  width: 100%;
+  text-decoration: none;
+}
+
+.photopost__link .fas {
+  margin-right: 10px;
+}
+
+.floatingmsg {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
+.floatingmsg__bubble {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px var(--shadow-color);
+  background: var(--button-link);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.floatingmsg__bubble:hover .fa-edit {
+  color: var(--fb-white);
+}
+
+.floatingmsg__bubble img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.floatingmsg__notification {
+  background: var(--fb-red);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.right__navigation {
+  float: right;
+  width: 23%;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  /* border: 2px solid black; */
+  color: var(--fb-black);
+}
+
+.right__navigation a {
+  color: var(--fb-black);
+}
+
+.right__navigation-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  cursor: pointer;
+  /* border: 2px solid black; */
+  position: relative;
+}
+
+.right__navigation-item a {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  text-decoration: none;
+}
+
+.right__navigation-item a:hover {
+  color: var(--fb-blue);
+}
+
+.friend__requests-heading {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.right__navigation-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+.right__navigation-item-title {
+  font-size: 1rem;
+  font-weight: 500px;
+  color: var(--fb-black);
+}
+
+.right__navigation-sponsored-pages h2 {
+  color: var(--fb-black);
+}
+
+.right__navigation-your-pages h2 {
+  color: var(--fb-black);
+  margin-top: 2px;
+}
+
+.right__navigation-item-icons {
+  width: 100%;
+  height: 100px;
+  /* border: solid 2px black; */
+  padding-top: 10px;
+}
+
+.right__navigation-item-icons span i{
+  font-weight: 100;
+}
+
+.friends__requests-info {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.confirm__or-cancel button {
+  background: var(--fb-black);
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+
+.confirm__or-cancel button:hover {
+  background: var(--fb-bgcolor);
+  color: var(--fb-black);
+}
+
+.birthdays {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* border: 2px solid black; */
+  /* margin-left: 10px; */
+}
+
+.birthdays__person-name {
+  display: flex;
+}
+
+.birthdays__person-name a {
+  display: flex;
+  align-items: center;
+}
+
+.birthdays__person-name strong{
+  margin-right: 4px;
+}
+
+.fa-gift {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.birthdays h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.birthdays__person-name {
+  /* border: 2px solid black; */
+}
+
+.birthdays__person-name a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.contacts {
+  margin-bottom: 20px;
+}
+
+.contacts__icons {
+  display: flex;
+}
+
+.contacts__heading {
+  display: flex;
+}
+
+.contacts__icons {
+  position: absolute;
+  right: 60px;
+}
+
+.contacts__icons i {
+  padding-left: 10px;
+}
+
+.right-top-icon {
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.right-top-icon-text {
+  margin-left: 10px;
+}
+
+.right-top-icon-text-1{
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.right-top-icon-text-2 {
+  margin-left: 13px;
+  font-weight: 900;
+}
+
+.right__navigation-item-notification-bubble {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #16c79a;
+  color: #fff;
+  width: 13px;
+  height: 13px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* To make a perfect circle give the item the same height and width and change the border radius to 50% */
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  font-weight: 700;
+  border: 3px solid white;
+}
+
+/* Making the website responsive */
+
+@media only screen and (max-width: 1300px) {
+  .header__menu-tabs {
+    display: none;
+  }
+
+  .feed {
+    width: 100%;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .right__navigation {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .sidenav {
+    display: none;
+  }
+
+  .right__navigation {
+    display: none;
+  }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .header__user-img {
+    display: none;
+  }
+
+  .header__user-name {
+    display: none;
+  }
+
+  .header__logo-search .fa-search {
+    left: 12px;
+    top: 12px;
+  }
+
+  .header__logo-search input[type="text"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .header__mobile-button {
+    display: flex;
+  }
+
+  .feed {
+    display: block;
+  }
+
+  .stories {
+    flex-wrap: nowrap;
+    z-index: 9;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+  .stories__video-container {
+    flex: 1 0 auto;
+  }
+
+   .create__room {
+    flex-wrap: nowrap;
+    z-index: 9;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+  .create__room-image {
+    flex: 1 0 auto;
+  }
+  
+
+  .content-area--feed {
+    width: 100%;
+  }
+
+  .floatingmsg{
+    display: none;
+  }
+
+  .create__room button {
+    display: none;
+  }
+
+  .create__room-images{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+  }
+
+  /* .create__room button {
+    display: none
+  } */
+}
+
+@media only screen and (max-width: 411px) {
+  .header__account {
+    display: none;
+  }
+
+  .post__types-title {
+    display: none;
+  }
+
+  .newpost input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    background: var(--fb-bgcolor);
+    color: var(--fb-black);
+  }
+
+  .create__room button {
+    display: none;
+  }
+
+  .create__room-images{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 10px;
+  }
+}
